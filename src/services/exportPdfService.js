@@ -6,7 +6,7 @@ export const exportToPdf = (title, columns, rows, username) => {
   
   // Header
   doc.setFontSize(20)
-  doc.setTextColor(30, 58, 138) // ideark-primary color
+  doc.setTextColor(30, 58, 138) 
   doc.text('IDEARK', 14, 20)
   
   doc.setFontSize(16)
@@ -28,11 +28,11 @@ export const exportToPdf = (title, columns, rows, username) => {
       cellPadding: 3
     },
     headStyles: {
-      fillColor: [30, 58, 138], // ideark-primary
+      fillColor: [30, 58, 138], 
       textColor: 255
     },
     alternateRowStyles: {
-      fillColor: [248, 250, 252] // ideark-light
+      fillColor: [248, 250, 252] 
     }
   })
   

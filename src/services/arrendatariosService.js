@@ -87,7 +87,7 @@ export const arrendatariosService = {
     
     const stats = {
       total: data.length,
-      activos: data.length, // Todos los arrendatarios en la tabla están activos
+      activos: data.length, 
       inactivos: 0
     }
     

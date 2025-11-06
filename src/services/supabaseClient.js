@@ -14,9 +14,9 @@ if (!supabaseUrl || !supabaseAnonKey) {
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   db: {
-    schema: 'api' // Usar el esquema api como requiere Supabase
+    schema: 'api' 
   },
   auth: {
-    persistSession: false // Desactivar persistencia de sesión de Supabase Auth
+    persistSession: false 
   }
 })
