@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Color Variables - Green Palette (Bangladesh Green as main) */
+  --color-primary: #4CAF50;        /* Bangladesh Green (main) */
+  --color-secondary: #66BB6A;      /* Light Bangladesh Green */
+  --color-accent: #388E3C;         /* Dark Bangladesh Green */
+  --color-white: #FFFFFF;
+  --color-light-gray: #F5F5F5;
+  --color-medium-gray: #9E9E9E;
+  --color-dark-gray: #212121;
+  --color-darker-gray: #1A1A1A;
+  --color-rich-black: #000000;
+  
+  /* Glass Effect */
+  --glass-bg: rgba(255, 255, 255, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --glass-shadow: 0 8px 32px 0 rgba(76, 175, 80, 0.15);
+  
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 300ms ease-in-out;
+  --transition-slow: 500ms ease-in-out;
+}
+
+@layer base {
+  * {
+    @apply border-ideark-light-gray;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-ideark-light-gray to-white text-ideark-dark-gray font-sans;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium text-ideark-dark-gray font-sans;
+  }
+}
+
+@layer components {
+  /* Modern Glass Card */
+  .glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    @apply rounded-modern;
+  }
+  
+  /* Modern Buttons */
+  .btn-primary {
+    @apply bg-gradient-to-r from-ideark-slate-700 to-ideark-slate-800 hover:from-ideark-slate-600 hover:to-ideark-slate-700 text-white px-6 py-3 rounded-pill font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-floating;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-ideark-slate-50 text-ideark-slate-700 px-6 py-3 rounded-pill font-medium border-2 border-ideark-slate-200 hover:border-ideark-slate-300 transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .btn-success {
+    @apply bg-gradient-to-r from-ideark-success to-ideark-primary-light hover:from-ideark-primary-light hover:to-ideark-success text-white px-6 py-3 rounded-pill font-medium transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .btn-warning {
+    @apply bg-gradient-to-r from-ideark-warning to-orange-400 hover:from-orange-400 hover:to-ideark-warning text-white px-6 py-3 rounded-pill font-medium transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .btn-error {
+    @apply bg-gradient-to-r from-ideark-error to-red-400 hover:from-red-400 hover:to-ideark-error text-white px-6 py-3 rounded-pill font-medium transition-all duration-300 transform hover:scale-105;
+  }
+  
+  /* Modern Card */
+  .card {
+    @apply bg-white rounded-modern shadow-soft p-6 border border-ideark-light-gray hover:shadow-floating transition-all duration-300 transform hover:-translate-y-1;
+  }
+  
+  /* Modern Input */
+  .input-field {
+    @apply w-full px-4 py-3 border-2 border-ideark-light-gray rounded-modern focus:outline-none focus:ring-4 focus:ring-ideark-primary/20 focus:border-ideark-primary transition-all duration-300 bg-white;
+  }
+  
+  /* Modern Table */
+  .table-modern {
+    @apply bg-white rounded-modern shadow-soft overflow-hidden border border-ideark-light-gray;
+  }
+  
+  .table-header {
+    @apply bg-gradient-to-r from-ideark-light-gray to-ideark-medium-gray/30 text-ideark-dark-gray px-6 py-4 text-left text-sm font-semibold;
+  }
+  
+  .table-cell {
+    @apply px-6 py-4 text-sm text-ideark-dark-gray border-b border-ideark-light-gray hover:bg-ideark-light-gray/30 transition-colors duration-200;
+  }
+  
+  /* Stat Card */
+  .stat-card {
+    @apply bg-white rounded-modern p-6 shadow-soft border border-ideark-light-gray hover:shadow-floating transition-all duration-300 transform hover:-translate-y-2 hover:scale-105;
+  }
+  
+  /* Sidebar Item */
+  .sidebar-item {
+    @apply flex items-center space-x-3 px-4 py-3 rounded-soft text-white/80 hover:text-white hover:bg-white/10 transition-all duration-300 cursor-pointer;
+  }
+  
+  .sidebar-item.active {
+    @apply text-white bg-white/20 shadow-soft;
+  }
+  
+  /* Glass Navbar */
+  .navbar-glass {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--glass-border);
+    @apply shadow-soft;
+  }
+  
+  /* Floating Animation */
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  /* Pulse Animation */
+  .pulse-soft {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
