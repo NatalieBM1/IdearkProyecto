@@ -1,5 +1,8 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 export default defineConfig({
   plugins: [react()],
@@ -27,9 +30,13 @@ export default defineConfig({
     chunkSizeWarningLimit: 1000,
   },
   preview: {
-    host: '0.0.0.0', 
-    port: process.env.PORT || 8080, 
-    allowedHosts: ['ideark-proyecto.onrender.com'], 
-    open: false, 
+    host: '0.0.0.0',
+    port: process.env.PORT || 8080,
+    allowedHosts: ['ideark-proyecto.onrender.com'],
+    open: false,
+  },
+  define: {
+    
+    'process.env': process.env,
   },
 });
