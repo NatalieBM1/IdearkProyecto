@@ -1,5 +1,3 @@
-# Script de despliegue para Ideark Dashboard (PowerShell)
-# Uso: .\deploy.ps1
 
 Write-Host "🚀 Iniciando proceso de despliegue para Ideark Dashboard..." -ForegroundColor Green
 
